@@ -3,7 +3,7 @@ import 'package:stock_submat/main.dart';
 
 class SupabaseFunc{
   Future<List<Map<String, dynamic>>> fetchSrn(String tablename, String items, String conditions, String groupby) async{
-    final data = await supabase.rpc('select_data', params: {
+    final data = await supabase.rpc('select_groupby', params: {
       'table_name': tablename, 
       'select_item': items, 
       'conditions': conditions,
